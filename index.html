@@ -84,8 +84,8 @@
       color: var(--red);
       text-shadow: 2px 2px 0 #8b0000, 4px 4px 0 #500000;
     }
-    .nav-logo .c { color: var(--cyan); }
-    .nav-logo .w { color: #fff; }
+    .nav-logo .rev { color: #ff8c00; text-shadow: 2px 2px 0 #7a3e00; }
+    .nav-logo .smp { color: var(--cyan); text-shadow: 2px 2px 0 #004040; }
 
     nav ul { list-style: none; display: flex; gap: 28px; }
     nav ul a {
@@ -445,7 +445,8 @@
       gap: 12px;
     }
     .footer-logo { font-family: 'Press Start 2P', monospace; font-size: 10px; color: var(--red); }
-    .footer-logo .c { color: var(--orange); }
+    .footer-logo .rev { color: #ff8c00; }
+    .footer-logo .smp { color: var(--cyan); }
     footer p { font-size: 16px; color: #3a3a3a; }
 
     /* ── FLOATING PARTICLES ── */
@@ -527,6 +528,39 @@
     }
     .nav-social a:hover { opacity: 1; transform: scale(1.2); }
 
+    /* ── TRAFFIC ── */
+    #traffic { background: #0b0b0b; text-align: center; }
+
+    .traffic-box {
+      max-width: 900px;
+      margin: 0 auto;
+      border: 4px solid var(--border);
+      box-shadow: 6px 6px 0 #000;
+      position: relative;
+    }
+    .traffic-box::before {
+      content: '📈 ТРАФИК СЕРВЕРА';
+      font-family: 'Press Start 2P', monospace;
+      font-size: 8px;
+      position: absolute;
+      top: -14px; left: 24px;
+      background: var(--green);
+      padding: 4px 12px;
+      color: #000;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .traffic-inner {
+      overflow: hidden;
+      height: 290px;
+    }
+    .traffic-box iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+    }
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       nav { padding: 10px 16px; }
@@ -557,11 +591,12 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">DANI<span class="c">REV</span> <span class="w">SMP</span></div>
+  <div class="nav-logo">DANI<span class="rev">REV</span> <span class="smp">SMP</span></div>
   <ul>
     <li><a href="#features">Особенности</a></li>
     <li><a href="#about">О нас</a></li>
     <li><a href="#join">Как зайти</a></li>
+    <li><a href="#traffic">Трафик</a></li>
     <li><a href="#community">Сообщество</a></li>
     <li><a href="#cta">IP</a></li>
   </ul>
@@ -674,6 +709,24 @@
 
 <div class="pixel-divider"></div>
 
+<!-- TRAFFIC -->
+<section id="traffic">
+  <span class="section-title" style="color:var(--green)">ТРАФИК СЕРВЕРА</span>
+
+  <div class="traffic-box">
+    <div class="traffic-inner">
+      <iframe
+        src="https://minecraftrating.ru/server_chart/397937/"
+        title="Трафик DaniRev SMP"
+        loading="lazy"
+        scrolling="no"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="pixel-divider"></div>
+
 <!-- COMMUNITY -->
 <section id="community">
   <span class="section-title" style="color:var(--green)">НАШЕ СООБЩЕСТВО</span>
@@ -718,7 +771,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">DANI<span class="c">REV</span> SMP</div>
+  <div class="footer-logo">DANI<span class="rev">REV</span> <span class="smp">SMP</span></div>
   <div style="display:flex; gap:16px; align-items:center;">
     <a href="https://discord.gg/BK853VpP53" target="_blank" style="color:#7289da; text-decoration:none; font-family:'Press Start 2P',monospace; font-size:8px; text-shadow:1px 1px 0 #000;">Discord</a>
     <a href="https://t.me/DaniRevGroup" target="_blank" style="color:#229ed9; text-decoration:none; font-family:'Press Start 2P',monospace; font-size:8px; text-shadow:1px 1px 0 #000;">Telegram</a>
