@@ -225,7 +225,7 @@
 
     .enchants-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -235,7 +235,7 @@
       background: var(--panel);
       border: 3px solid var(--border);
       box-shadow: 4px 4px 0 #000;
-      padding: 24px 22px;
+      padding: 22px 20px 20px;
       position: relative;
       transition: transform .15s, box-shadow .15s;
       opacity: 0;
@@ -249,19 +249,19 @@
 
     .enchant-name {
       font-family: 'Press Start 2P', monospace;
-      font-size: 11px;
+      font-size: 10px;
       color: var(--purple);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       letter-spacing: 1px;
-      line-height: 1.8;
+      line-height: 2;
       text-shadow: 1px 1px 0 #2a0a40;
     }
 
     .enchant-desc {
-      font-size: 19px;
+      font-size: 18px;
       color: #ccc;
-      line-height: 1.55;
-      margin-bottom: 18px;
+      line-height: 1.5;
+      margin-bottom: 14px;
       border-left: 3px solid #2a2a2a;
       padding-left: 12px;
     }
@@ -269,15 +269,18 @@
     .enchant-meta {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
+      border-top: 2px solid #1a1a1a;
+      padding-top: 12px;
     }
 
     .meta-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 16px;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 8px;
+      font-size: 17px;
       line-height: 1.5;
+      align-items: start;
     }
 
     .meta-label {
@@ -285,16 +288,15 @@
       font-size: 7px;
       color: #555;
       letter-spacing: 1px;
-      min-width: 70px;
-      padding-top: 3px;
-      flex-shrink: 0;
+      padding-top: 4px;
+      line-height: 1.6;
     }
 
     .meta-val { color: #aaa; }
-    .meta-val.items   { color: var(--cyan); }
-    .meta-val.level   { color: var(--yellow); }
+    .meta-val.items    { color: var(--cyan); }
+    .meta-val.level    { color: var(--yellow); }
     .meta-val.incompat { color: var(--red); }
-    .meta-val.found   { color: var(--green); }
+    .meta-val.found    { color: var(--green); }
 
     /* Level stars */
     .level-stars { color: var(--yellow); letter-spacing: 2px; }
@@ -744,5 +746,6 @@
   }
 </script>
 
+<script src="transitions.js"></script>
 </body>
 </html>
